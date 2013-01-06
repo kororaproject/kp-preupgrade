@@ -1,0 +1,21 @@
+diff -Nurd preupgrade-1.1.10/preupgrade/__init__.py preupgrade-1.1.10-new/preupgrade/__init__.py
+--- preupgrade-1.1.10/preupgrade/__init__.py	2011-10-22 01:10:04.000000000 +1100
++++ preupgrade-1.1.10-new/preupgrade/__init__.py	2011-12-18 20:15:53.779059171 +1100
+@@ -63,7 +63,7 @@
+ elif os.path.exists("data/releases.txt"):
+     releasesfn = "data/releases.txt"
+ else:
+-    releasesfn = "http://mirrors.fedoraproject.org/releases.txt"
++    releasesfn = "http://kororaproject.org/pub/korora/releases.txt"
+ 
+ runfile = "/var/run/preupgrade"
+ repofile = "/var/run/preupgrade.repo"
+@@ -730,7 +730,7 @@
+         mykernel  = self.bootpath  + '/' + os.path.basename(self.kernel)
+         myinitrd = self.bootpath + '/' + os.path.basename(self.initrd)
+         arch = self.conf.yumvar['basearch']
+-        argstr = "preupgrade"
++        argstr = "preupgrade upgradeany"
+         if extra_args:
+             argstr += " " + extra_args
+         title = _("Upgrade to %s") % self.pu_release
