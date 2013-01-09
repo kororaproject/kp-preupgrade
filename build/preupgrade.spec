@@ -4,7 +4,8 @@ Version: 1.1.11
 Release: 2%{?dist}
 Epoch:   1
 License: GPLv2+
-Source: https://fedorahosted.org/releases/p/r/preupgrade/%{name}-%{version}.tar.bz2
+#Source: https://fedorahosted.org/releases/p/r/preupgrade/%{name}-%{version}.tar.bz2
+Source: %{name}-%{version}.tar.bz2
 Source1: releases.txt
 Patch0: preupgrade-kororaa.patch
 URL: https://fedorahosted.org/preupgrade/
